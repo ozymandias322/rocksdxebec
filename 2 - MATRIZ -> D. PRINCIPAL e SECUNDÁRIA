@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int M[4][4];
+    int j = 0;
+    int k = 0;
+ /* preenchimento das linhas e colunas da matriz */
+
+    for(j = 0; j < 4; ++j)
+    {
+        for(k=0; k < 4; ++k)
+        {
+            printf("Digite os valores da matriz: ");
+            scanf("%i",&M[j][k]);
+        }
+    }
+/*-----------------------------------------------------------------------------------------------*/
+/* COMANDO DE EXIBICAO DA DIAGONAL PRINCIPAL */
+    for(j=0; j < 4 ; ++j)
+    {
+       printf("\nValor Diagonal Principal = %i ", M[j][j]);
+    }
+
+/* COMANDO DE EXIBICAO DA DIAGONAL SECUNDARIA */
+    for(j=0; j < 4 ; ++j)
+    {
+
+       for(k=0; k < 4; ++k)
+       {
+           if(j+k==3)
+           {
+               printf("\nValor Diagonal Secundaria = %i ", M[j][k]);
+           }
+       }
+    }
+
+    return 0;
+}
